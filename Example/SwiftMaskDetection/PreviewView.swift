@@ -33,8 +33,9 @@ class PreviewView: UIView {
     // Functions
     func toViewCoords(_ rect: CGRect, mirrored: Bool) -> CGRect {
         var bound = rect
+        
+        // If front or back camera use
         if mirrored {
-            // Flip x-axis
             bound = bound
                 .applying(CGAffineTransform(scaleX: -1, y: 1))
                 .applying(CGAffineTransform(translationX: 1, y: 0))
