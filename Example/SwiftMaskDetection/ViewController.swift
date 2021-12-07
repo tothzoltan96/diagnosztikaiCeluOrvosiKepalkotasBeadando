@@ -75,7 +75,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 let frame = previewView.toViewCoords(results[i].bound, mirrored: camera == .front)
                 let label = results[i].status == .mask ? "Van rajtad maszk!" : "Nincs rajtad maszk!"
                 boxes[i].show(frame: frame,
-                              label: "\(label) \(String(format: "%.2f", results[i].confidence))",
+                              label: "\(label)",
                               color: results[i].status == .mask ? .systemGreen : .red)
             } else {
                 boxes[i].hide()
